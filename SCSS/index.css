@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  transition: 0.3s ease-in-out;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+nav ul {
+  list-style: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+}
+
+:root {
+  --pale-blue: hsl(243, 100%, 93%);
+  --grayish-blue: hsl(229, 7%, 55%);
+  --dark-blue: hsl(228, 56%, 26%);
+  --very-dark-blue: hsl(229, 57%, 11%);
+  --font-size: 14px;
+  --font-family: "Raleway";
+}
+
+body {
+  height: 100vh;
+  background-image: url("../../images/bg-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--pale-blue);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #outer {
+  width: 70vw;
+}
+body #outer #inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+}
+body #outer #inner #one,
+body #outer #inner #two {
+  background-color: var(--dark-blue);
+  padding: 2rem;
+}
+body #outer #inner #one {
+  border-radius: 0.5rem 45% 0.5rem 0.5rem;
+}
+body #outer #inner #one #logo {
+  display: block;
+  margin-bottom: 2rem;
+}
+body #outer #inner #one img:not(#logo) {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background-color: var(--very-dark-blue);
+}
+body #outer #inner #one img:not(#logo) + img, body #outer #inner #one img:not(#logo):nth-of-type(2) {
+  margin-right: 1rem;
+}
+body #outer #inner #two {
+  border-radius: 0.5rem;
+  position: relative;
+  padding-bottom: 5rem;
+}
+body #outer #inner #two #sign {
+  width: 100%;
+  height: 1.2rem;
+  background-color: #141d48;
+  border-radius: 5rem;
+  margin-top: 0.6rem;
+  position: relative;
+}
+body #outer #inner #two #sign span {
+  width: 80%;
+  border: 3px solid #141d48;
+  display: inline-block;
+  height: inherit;
+  border-radius: 5rem;
+  background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  position: absolute;
+}
+body #outer #inner #two #sign span::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 95%;
+  border-radius: 50%;
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: white;
+}
+body #outer #inner #two #sign::before {
+  content: "0GB";
+  position: absolute;
+  left: 0;
+  bottom: -1.5rem;
+}
+body #outer #inner #two #sign::after {
+  content: "1000GB";
+  position: absolute;
+  right: 0;
+  bottom: -1.5rem;
+}
+body #outer #inner #two::before {
+  content: "GB Left";
+  color: var(--grayish-blue);
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-max-content;
+  height: max-content;
+  position: absolute;
+  z-index: 2;
+  left: 128px;
+  top: 9.5rem;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+body #outer #inner #two:after {
+  content: "185";
+  position: absolute;
+  z-index: 1;
+  left: 54px;
+  top: 8rem;
+  width: calc(100% - 128px);
+  height: 4rem;
+  border-radius: 0.5rem;
+  color: var(--very-dark-blue);
+  font-size: 1.8rem;
+  padding-left: 1rem;
+  background-color: var(--pale-blue);
+  font-weight: 700;
+  padding-top: 0.5rem;
+}
+
+@media screen and (min-width: 530px) {
+  body #outer {
+    height: 15rem;
+  }
+  body #outer #inner {
+    flex-direction: row;
+  }
+  body #outer #inner #one {
+    border-radius: 0.5rem 45% 0.5rem 0.5rem;
+    flex: 35%;
+    height: 85%;
+    align-self: flex-end;
+  }
+  body #outer #inner #two {
+    flex: 65%;
+    height: 60%;
+    align-self: flex-end;
+  }
+  body #outer #inner #two::before {
+    left: 75%;
+    top: -1rem;
+  }
+  body #outer #inner #two::after {
+    left: 60%;
+    top: -2.5rem;
+    max-width: 10rem;
+    height: 4rem;
+  }
+  body #outer #inner #two #shape {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--pale-blue);
+    transform: rotate(180deg);
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 100%);
+            clip-path: polygon(0% 0%, 0% 100%, 100% 100%);
+    position: absolute;
+    top: 0.99rem;
+    left: 80%;
+  }
+}
+@media screen and (min-width: 530px) and (max-width: 850px) {
+  body #outer #inner #two::before {
+    left: 85%;
+  }
+}
