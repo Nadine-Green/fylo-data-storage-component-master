@@ -197,7 +197,7 @@ body #outer #inner #two {
   padding: 2rem;
 }
 body #outer #inner #one {
-  border-radius: 0.5rem 45% 0.5rem 0.5rem;
+  border-radius: 0.5rem 80px 0.5rem 0.5rem;
 }
 body #outer #inner #one #logo {
   display: block;
@@ -296,7 +296,7 @@ body #outer #inner #two:after {
     background-image: url("../images/bg-desktop.png");
     background-color: var(--very-dark-blue);
     background-repeat: no-repeat;
-    background-position: 0rem 100%;
+    background-position: bottom;
     background-size: contain;
   }
   body #outer {
