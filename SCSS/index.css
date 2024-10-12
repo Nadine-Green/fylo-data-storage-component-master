@@ -172,7 +172,7 @@ a {
 
 body {
   height: 100vh;
-  background-image: url("../../images/bg-mobile.png");
+  background-image: url("../images/bg-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
   color: var(--pale-blue);
@@ -293,7 +293,7 @@ body #outer #inner #two:after {
 
 @media screen and (min-width: 530px) {
   body {
-    background-image: url("../../images/bg-desktop.png");
+    background-image: url("../images/bg-desktop.png");
     background-color: var(--very-dark-blue);
     background-repeat: no-repeat;
     background-position: 0rem 100%;
